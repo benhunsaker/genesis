@@ -1,0 +1,33 @@
+{
+  "name": "genesis",
+  "version": "0.1.0",
+  "description": "New project scaffolding command.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "gulp lint",
+    "lint:js": "gulp eslint",
+    "lint:package": "gulp packagelint",
+    "test": "npm run lint && NODE_ENV=test nyc mocha --check-leaks --recursive $(find tests -path '*_spec.js')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benhunsaker/genesis.git"
+  },
+  "author": "Ben Hunsaker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benhunsaker/genesis/issues"
+  },
+  "homepage": "https://github.com/benhunsaker/genesis#readme",
+  "devDependencies": {
+    "eslint-config-hapi": "^10.1.0",
+    "eslint-plugin-hapi": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-jsonlint": "^1.2.0",
+    "gulp-nice-package": "^1.1.0",
+    "gulp-task-loader": "^1.4.4",
+    "gulp-util": "^3.0.8",
+    "map-stream": "0.0.7"
+  }
+}
